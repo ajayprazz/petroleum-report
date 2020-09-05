@@ -16,6 +16,14 @@ $ cd yipl-intern-petroleum-report
 $ npm install
 ```
 
+## Creating database directory
+
+Create the database directory before running the application.
+
+```
+$ mkdir database
+```
+
 ## Running the application
 
 ```
