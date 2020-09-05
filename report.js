@@ -18,7 +18,7 @@ const fetchDataFromApi = async url => {
     }
     return jsonData;
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
 };
 
@@ -28,7 +28,7 @@ const insertDataToDatabase = async data => {
       updateOnDuplicate: ["sale"],
     });
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
 };
 
@@ -52,7 +52,7 @@ const getDateRange = async () => {
 
     return dateRange;
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
 };
 
@@ -72,7 +72,7 @@ const getDistinctProductNames = async () => {
 
     return petroleum_products;
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
 };
 
@@ -118,8 +118,12 @@ const createReport = async () => {
 
     return report;
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
+};
+
+const errorHandler = error => {
+  console.log(`${error.name}: ${error.message}`);
 };
 
 (async url => {
@@ -136,6 +140,6 @@ const createReport = async () => {
       console.table(report);
     }
   } catch (error) {
-    console.log(error);
+    errorHandler(error);
   }
 })(dataUrl);
