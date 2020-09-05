@@ -1,10 +1,9 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize({
-  dialect: "sqlite",
-  storage: "./database/petroleums.db",
-  logging: false,
-});
+const env = process.env.NODE_ENV || "production";
+const config = require(__dirname + "/../config/config.json")[env];
+
+const sequelize = new Sequelize(config);
 
 let db = {};
 

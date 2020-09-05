@@ -1,0 +1,15 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./database/petroleums-dev.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./database/petroleums-test.db"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./database/petroleums.db",
+    "logging": false
+  }
+}
