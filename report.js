@@ -81,10 +81,8 @@ const createReport = async () => {
     let report = [];
 
     const petroleum_products = await getDistinctProductNames();
-    console.log("product names", petroleum_products);
 
     const dateRange = await getDateRange();
-    console.log("date range", dateRange);
 
     for (
       let productIndex = 0;
@@ -133,7 +131,7 @@ const createReport = async () => {
 
       const report = await createReport();
       console.log(
-        "Sales report of petroleum products for five year intervals:"
+        "Sales report of petroleum products for five years intervals:"
       );
       console.table(report);
     }
