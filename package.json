@@ -4,7 +4,7 @@
   "description": "",
   "main": "report.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +12,9 @@
     "node-fetch": "^2.6.0",
     "sequelize": "^5.21.12",
     "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
   }
 }
