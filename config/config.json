@@ -5,7 +5,8 @@
   },
   "test": {
     "dialect": "sqlite",
-    "storage": "./database/petroleums-test.db"
+    "storage": "./database/petroleums-test.db",
+    "logging": false
   },
   "production": {
     "dialect": "sqlite",
