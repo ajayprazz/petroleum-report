@@ -29,3 +29,17 @@ $ mkdir database
 ```
 $ node report.js
 ```
+
+## For running tests
+
+Installing dev-dependencies
+
+```
+$ npm install --only=dev
+```
+
+Running the tests
+
+```
+$ npm run test
+```
